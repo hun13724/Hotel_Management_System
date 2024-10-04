@@ -1,6 +1,6 @@
 import java.util.Scanner;
-public class Main {
-    public static void HotelManagementSystem(String[] args) {
+public class HotelManagmentSystem {
+    public static void main(String[] args) {
 
         Hotel hotel= new Hotel();
 //
