@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class Hotel {
     private HashMap<String, Room> rooms;
-    private Hotel(){
+    protected Hotel(){
         rooms = new HashMap<>();
     }
     public void addRoom(Room room){
@@ -12,10 +12,10 @@ public class Hotel {
         return rooms.get(roomNumber);
     }
 
-    public void bookRoom(String roomNumber, Service services){
+    public void bookRoom(String roomNumber, Service service){
         Room room = rooms.get(roomNumber);
         if (room != null){
-            room.addService(services);
+            room.addService(service);
             System.out.println("Added " + service.getName() + " service to " + room.getDescription() + " - Room " + roomNumber);
         }else {
             System.out.println("Room " + roomNumber + " not found");
@@ -28,6 +28,7 @@ public class Hotel {
             System.out.println("Booking for " + room.getDescription() + " - Room " + roomNumber);
             System.out.println("Total Cost: $" + room.getTotalCost());
         } else{
+            System.out.println("Room " + roomNumber + " not found");
 
         }
     }

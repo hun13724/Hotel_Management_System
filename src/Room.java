@@ -20,7 +20,7 @@ abstract public class Room {
     public double getTotalCost(){
         double totalCost = baseRate;
         for (Service service : services) {
-            totalCost+= service.getCost;
+            totalCost += service.getCost();
         }
         return totalCost;
     }
