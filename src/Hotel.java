@@ -21,6 +21,7 @@ public class Hotel {
             System.out.println("Room " + roomNumber + " not found");
         }
     }
+
     public void displayBookingDetails(String roomNumber){
         Room room = rooms.get(roomNumber);
         if (room != null){
